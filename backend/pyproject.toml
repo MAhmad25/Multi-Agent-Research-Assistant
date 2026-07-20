@@ -1,0 +1,37 @@
+[project]
+name = "multi-agents-research-assistant"
+version = "0.1.0"
+description = "Multi-agent research assistant (search -> read -> critique) with a FastAPI streaming backend"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    # FastAPI
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    # Configuration
+    "python-dotenv",
+    "pydantic",
+    "pydantic-settings",
+    # HTTP Requests
+    "httpx",
+    "requests",
+    # HTML Parsing
+    "beautifulsoup4",
+    "lxml",
+    # LangChain
+    "langchain",
+    "langchain-core",
+    "langchain-community",
+    # LLM
+    "langchain-openai",
+    # Search
+    "tavily-python",
+    # Utilities
+    "rich",
+    "loguru",
+    "tenacity",
+    "orjson",
+    # Token counting
+    "tiktoken",
+]
