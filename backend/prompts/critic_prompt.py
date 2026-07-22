@@ -43,6 +43,7 @@ Your answer must be well structured, easy to read and suitable for rendering in 
 
 Never return HTML.
 Never return JSON.
+Return the response in GitHub Flavored Markdown.
 Never mention these formatting instructions.
 Produce an objective, evidence-based research report.
 """,

@@ -105,15 +105,17 @@ def _run_pipeline(query: str, event_queue: "queue.Queue") -> None:
 
     try:
         event_queue.put({"type": "phase_start", "phase": "search"})
-        state = run_search(state, callbacks=[QueueCallbackHandler(event_queue, "search")])
+        state = run_search(state, callbacks=[
+                           QueueCallbackHandler(event_queue, "search")])
         event_queue.put({"type": "phase_end", "phase": "search"})
 
         event_queue.put({"type": "phase_start", "phase": "reader"})
-        state = run_reader(state, callbacks=[QueueCallbackHandler(event_queue, "reader")])
+        state = run_reader(state, callbacks=[
+                           QueueCallbackHandler(event_queue, "reader")])
         event_queue.put({"type": "phase_end", "phase": "reader"})
-
         event_queue.put({"type": "phase_start", "phase": "critic"})
-        state = run_critic(state, callbacks=[QueueCallbackHandler(event_queue, "critic")])
+        state = run_critic(state, callbacks=[
+                           QueueCallbackHandler(event_queue, "critic")])
         event_queue.put({"type": "phase_end", "phase": "critic"})
 
         event_queue.put({"type": "final", "report": state["final_report"]})
@@ -131,7 +133,8 @@ def stream_research(query: str, heartbeat_interval: float = 15.0) -> Iterator[di
     proxy in front of it) doesn't get treated as idle and closed.
     """
     event_queue: "queue.Queue" = queue.Queue()
-    thread = threading.Thread(target=_run_pipeline, args=(query, event_queue), daemon=True)
+    thread = threading.Thread(target=_run_pipeline, args=(
+        query, event_queue), daemon=True)
     thread.start()
 
     while True:

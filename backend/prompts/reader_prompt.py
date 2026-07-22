@@ -17,7 +17,7 @@ Instructions:
 
 1. Carefully review every search result.
 2. Decide which webpages are most valuable for answering the research topic.
-3. Use the read_webpage tool whenever additional information is required.
+3. Use the read_webpage tool for all the urls please this is important additional information that is required required.
 4. Read all webpages as needed.
 5. Combine the webpage content with the search snippets.
 6. Remove advertisements, navigation menus and unrelated information.
@@ -61,7 +61,13 @@ Produce detailed research notes that include:
 - Dates
 - Evidence
 - Limitations
-- Source URLs
+- Source URLs for citation
+CITATION RULES (mandatory, not optional):
+- The Research Notes below are each tagged with their source URL.
+- You MUST end your report with a section titled exactly "# References".
+- Under it, list every unique source URL that appears anywhere in the
+  Research Notes, one per bullet, in this exact format:
+  - `https://exact-url-from-notes`
 
 Return only the research notes.
 """,

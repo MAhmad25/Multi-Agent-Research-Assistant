@@ -14,6 +14,5 @@ llm = ChatOpenAI(
     model="openrouter/auto",
     api_key=settings.OPENROUTER_API_KEY.get_secret_value(),
     base_url="https://openrouter.ai/api/v1",
-    streaming=True,
-    temperature=0.0,
+    temperature=0.7,
 )

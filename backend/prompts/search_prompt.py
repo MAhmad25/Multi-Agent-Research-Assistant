@@ -15,7 +15,10 @@ You have access to a search web tool.
 Never answer the user's question.
 Never summarize search results.
 Your only responsibility is discovering relevant sources.
-Return enough search results for downstream research.
+Return only in this format but with real data Search Result 
+            Title: 
+            URL: 
+            Summary: 
 """,
         ),
         (
@@ -33,7 +36,7 @@ Your objectives are:
 - Search from multiple perspectives whenever appropriate.
 - Retrieve the most relevant webpages that will help answer the research question.
 
-Return only the search results which is more web urls.
+Return only the search results which is urls mostly.
 The next agent will read or scrape the webpages using beautiful soup, therefore focus on finding useful sources instead of answering the question.
 """,
         ),
