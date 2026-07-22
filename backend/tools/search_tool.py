@@ -4,7 +4,6 @@ from tavily import TavilyClient
 from keys import settings
 
 tavily = TavilyClient(api_key=settings.TAVILY_API_KEY.get_secret_value())
-print(settings)
 
 
 @tool

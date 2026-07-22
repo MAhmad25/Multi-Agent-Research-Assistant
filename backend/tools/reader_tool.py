@@ -45,7 +45,7 @@ def read_webpage(url: str) -> str:
 
         cleaned_text = "\n".join(lines)
 
-        return cleaned_text[:15000]
+        return cleaned_text[:25000]
 
     except Exception as e:
         return f"Error reading webpage: {str(e)}"

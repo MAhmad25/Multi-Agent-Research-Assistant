@@ -1,7 +1,9 @@
+from keys import settings
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.research import router as research_router
+
 
 app = FastAPI(title="Multi-Agent Research Assistant API")
 
@@ -9,6 +11,9 @@ ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+
+if settings.frontend_url:
+    ALLOWED_ORIGINS.append(settings.frontend_url)
 
 app.add_middleware(
     CORSMiddleware,

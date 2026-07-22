@@ -6,8 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent
 
 
 class Settings(BaseSettings):
-    OPENROUTER_API_KEY: SecretStr = None
-    TAVILY_API_KEY: SecretStr = None
+    OPENROUTER_API_KEY: SecretStr = None  # type: ignore
+    TAVILY_API_KEY: SecretStr = None  # type: ignore
+    frontend_url: str | None = None
 
     model_config = SettingsConfigDict(
         env_file=BASE_DIR / ".env",
