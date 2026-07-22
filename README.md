@@ -2,9 +2,8 @@
 
 Full-stack multi-agent research assistant that turns a user query into a structured research report through a search, read, and critique workflow.
 
-<div class="display:flex;"><img src="https://i.ibb.co/h1KpCTj9/737-1x-shots-so.png" alt="737-1x-shots-so" border="0">
-<img src="https://i.ibb.co/WpyrzWz3/507-1x-shots-so.png" alt="507-1x-shots-so" border="0">
-</div>
+<img src="https://i.ibb.co/tPhVvyxT/737-1x-shots-so.png" alt="737-1x-shots-so" border="0">
+<img src="https://i.ibb.co/3m3P7pT3/507-1x-shots-so.png" alt="507-1x-shots-so" border="0">
 
 ## Overview
 
